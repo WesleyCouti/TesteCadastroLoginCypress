@@ -16,5 +16,9 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+global.usuario = { email: '',
+                   senha: 'Abc123@#',
+                   nome: ''}
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

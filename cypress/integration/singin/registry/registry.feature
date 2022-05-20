@@ -1,12 +1,19 @@
-Feature: Login Corretor Parceiro
+Feature: Cadastro de Usuario
 
-    Background: Acessar página de login
-    Given acesso a pagina inicial do VOL
+    Eu como consumidor desejo realizar cadastro no site
 
-    Scenario: Realizar login com corretor cadastrado
-    When insiro os dados de um corretor já cadastrado
-    Then deverá apresentar a tela inicial do VOL para o perfil do Corretor Parceiro
+    Scenario: Cadastrar usuario valido
+    Given cliquei para realizar sing-in
+    When informo meu email para cadastro de usuario
+     And finalizo meu cadastro preenchendo todos os dados do usuario
+    Then O sistema realiza meu cadastro com sucesso me autenticando na pagina
 
-    Scenario: Inserir e-mail inválido no login do Corretor
-    When insiro um e-mail invalido
-    Then deverá apresentar mensagem de "E-mail inválido" e "Campo obrigatório" em senha
+    Scenario: Cadastrar usuario com email invalido
+    Given cliquei para realizar sing-in
+    When tentei me inscrever com um email invalido
+    Then o sistema notifica que o email utilizado e invalido
+
+    Scenario: Cadastrar usuario com email existente
+    Given cliquei para realizar sing-in
+    When tentei me inscrever com um email ja esta em uso
+    Then o sistema notifica que o email ja esta sendo utilizado por outro usuario
