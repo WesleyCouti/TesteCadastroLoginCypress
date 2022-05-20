@@ -30,7 +30,7 @@ before(() =>{
         cy.get('#postcode').type("12451");
         cy.get('#phone_mobile').type("11997894512");
 
-      
+
     })
 
     it("Finalizar o cadastro do usuario", () =>{
