@@ -31,7 +31,6 @@ describe("User Registry", () =>{
             cy.get('#postcode').type("12451");
             cy.get('#phone_mobile').type("11997894512");
 
-
         })
 
         it("Finalizar o cadastro do usuario", () =>{
@@ -39,10 +38,14 @@ describe("User Registry", () =>{
             cy.get('.account > span').should('have.text', `${user.name.first} ${user.name.last}`);
         })
 
-
-        it("Informar um email invalido", () =>{
-            cy.get('#email_create').type(`${user.email}{enter}`)
+        it("Efetuar o sing out da pagina", () =>{
+            cy.get('.logout').click();
         })
+
+
+
+
+        
 
         // it("Validar obrigatoriedade do formulario", () =>{
         //     cy.get('#email_create').type(`${Faker.Internet.email()}{enter}`)
