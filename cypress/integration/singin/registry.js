@@ -44,6 +44,10 @@ describe("User Registry", () =>{
 
 
 
+        it("Informar um email invalido", () =>{
+            cy.get('#email_create').type(`${user.email}{enter}`)
+        })
+
 
         
 
